@@ -1,10 +1,10 @@
 # DEFINE ALL YOUR VARIABLES HERE
 
 instance_type = "t2.medium"
-ami           = "ami-0e86e20dae9224db8"   # Ubuntu 24.04
+ami           = "ami-0fc5120b2d80d4749"   # Ubuntu 24.04 in ap-south-1 (Mumbai)
 key_name      = "ubuntu"                  # Matches ubuntu.pem in this directory
 volume_size   = 30
-region_name   = "us-east-1"
+region_name   = "ap-south-1"
 server_name   = "JENKINS-SERVER"
 
 # Note: 
