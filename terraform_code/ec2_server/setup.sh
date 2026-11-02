@@ -46,13 +46,14 @@ java -version
 # REF: https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 sudo apt update -y                                   # to update package
 sudo apt install jenkins -y                          # to install jenkins
 
 sudo systemctl start jenkins                         # to start jenkins service
-# sudo systemctl status jenkins                        # to check the status if jenkins is running or not
+sudo systemctl enable jenkins                        # to start jenkins on boot
+# sudo systemctl status jenkins                      # to check the status if jenkins is running or not
 
 # Get Jenkins_Public_IP
 ip=$(curl ifconfig.me)
