@@ -23,11 +23,11 @@ module "eks" {
   eks_managed_node_groups = {
     panda-node = {
       min_size     = 2
-      max_size     = 4
+      max_size     = 3
       desired_size = 2
 
-      instance_types = ["t2.medium"]
-      capacity_type  = "SPOT"
+      instance_types = ["t3.small"]
+      capacity_type  = "ON_DEMAND"
 
       tags = {
         ExtraTag = "Panda_Node"
