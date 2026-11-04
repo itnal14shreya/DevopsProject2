@@ -667,7 +667,7 @@ li {
   align-items: center;
   display: flex;
 }
-.header-nav-profile/category-dropdown-div-label {
+.header-nav-profile\/category-dropdown-div-label {
   color: #fff;
   padding: 12px 0px 12px 0px;
   display: flex;
@@ -676,10 +676,10 @@ li {
   letter-spacing: 0.02em;
   line-height: 22px;
 }
-.header-nav-profile/category-dropdown-div-div {
+.header-nav-profile\/category-dropdown-div-div {
   padding: 12px 0px 12px 24px;
 }
-.header-nav-profile/category-dropdown-div-div:last-of-type {
+.header-nav-profile\/category-dropdown-div-div:last-of-type {
   padding-right: 24px;
 }
 
