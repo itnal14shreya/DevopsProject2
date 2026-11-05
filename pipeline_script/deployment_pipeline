@@ -47,8 +47,10 @@ pipeline {
             steps {
                 script {
                     sh """
-                    # Install ArgoCD
-                    kubectl create namespace argocd || true
+                    # Check and create namespace only if it does not exist
+                    if ! kubectl get namespace argocd > /dev/null 2>&1; then
+                        kubectl create namespace argocd
+                    fi
                     kubectl apply --server-side -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
                     kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
                     """
